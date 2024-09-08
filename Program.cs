@@ -5,14 +5,14 @@ using static System.Environment;
 
 string endpoint = GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT", EnvironmentVariableTarget.User) ?? "";
 string key = GetEnvironmentVariable("AZURE_OPENAI_API_KEY", EnvironmentVariableTarget.User) ?? "";
-const string deploymentOrModelName = "EstudosIAGPT4";
+const string deploymentName = "EstudosIAGPT4";
  async Task<string> GetContent(string prompt)
 {
     var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 
     var chatCompletionsOptions = new ChatCompletionsOptions
     {
-        DeploymentName = deploymentOrModelName,
+        DeploymentName = deploymentName,
         Temperature = (float)0.5,
         MaxTokens = 800,
         NucleusSamplingFactor = (float)0.95,
