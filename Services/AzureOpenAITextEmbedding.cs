@@ -4,7 +4,7 @@ using System;
 using static System.Environment;
 namespace EstudosIA.Services
 {
-    public class AzureOpenAIClassService
+    public class AzureOpenAITextEmbedding
     {
 
         string endpoint = GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT", EnvironmentVariableTarget.User) ?? "";

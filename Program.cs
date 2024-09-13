@@ -1,4 +1,4 @@
 using EstudosIA.Services;
-var gptPrompt = "Gere uma frase motivacional para encarar a segunda-feira";
+var gptPrompt = "Estou triste porque meu código não funciona";
 
-Console.WriteLine($"{await new AzureOpenAIClassService().GetContent(gptPrompt)}");
+Console.WriteLine($"{await new AzureOpenAIAgent().GetContent(gptPrompt)}");
